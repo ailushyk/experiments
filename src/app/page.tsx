@@ -9,9 +9,12 @@ export default function HomePage() {
     <MainLayout>
       <SiteHeader>Next.js + TypeScript + Tailwind CSS</SiteHeader>
       <nav>
-        <ul className='divide-y'>
-          <li className='p-2'>
-            <NavLnk href='/layouts/kevin-powell/1'>Layout 2 + 1</NavLnk>
+        <ul className="divide-y">
+          <li className="p-2">
+            <NavLnk href="/layouts/kevin-powell/1">Layout 2 + 1</NavLnk>
+          </li>
+          <li className="p-2">
+            <NavLnk href="/drag/1">Drag & Drop</NavLnk>
           </li>
         </ul>
       </nav>
@@ -25,10 +28,7 @@ interface NavLinkProps extends LinkProps {
 
 function NavLnk({ href, children }: NavLinkProps) {
   return (
-    <Link
-      href={href}
-      className='underline-offset-4 hover:underline'
-    >
+    <Link href={href} className="underline-offset-4 hover:underline">
       {children}
     </Link>
   )
